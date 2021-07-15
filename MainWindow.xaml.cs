@@ -26,9 +26,5 @@ namespace Text2Double
             DataContext = new MainViewModel();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

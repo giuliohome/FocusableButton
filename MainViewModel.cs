@@ -47,8 +47,7 @@ namespace Text2Double
             get { return myVarB; }
             set { 
                 myVarB = value; 
-                OnPropertyChanged("MyPropertyB");
-                ((DelegateCommand)DoubleCmd).RaiseCanExecuteChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -59,8 +58,7 @@ namespace Text2Double
             get { return myVarA; }
             set { 
                 myVarA = value; 
-                OnPropertyChanged("MyPropertyA");
-                ((DelegateCommand)DoubleCmd).RaiseCanExecuteChanged();
+                OnPropertyChanged();
             }
         }
 
