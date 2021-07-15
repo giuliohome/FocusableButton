@@ -18,6 +18,7 @@
         <!-- Do I need , UpdateSourceTrigger=PropertyChanged above? -->
         <!-- No, my answer is: delete Focusable false below! -->
         <Button Focusable="False" Command="{Binding DoubleCmd}" Content="Button" HorizontalAlignment="Left" Margin="99,187,0,0" VerticalAlignment="Top" Width="208" Height="48" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="48" Margin="426,64,0,0" TextWrapping="Wrap" Text="another TB so I can move focus" VerticalAlignment="Top" Width="419"/>
 
 
     </Grid>
