@@ -61,8 +61,9 @@ Is my reasoning correct? Or is it an XY problem?
 > I think that to fix it I have to set
 ```
 <TextBox Text="{Binding MyPropertyA, UpdateSourceTrigger=PropertyChanged}"
-Is my reasoning correct?
 ```
+> Is my reasoning correct?
+
 No, you could be completely wrong here, devil hides in details and you're maybe overlooking a fundamental detail.
 
 You can make the button focusable, why are you setting Focusable="False"?
