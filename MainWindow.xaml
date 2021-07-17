@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Text2Double"
         mc:Ignorable="d"
         Title="MainWindow" Height="803.889" Width="1130.556">
+    <Window.Resources>
+        <local:DoubleMultiConverter x:Key="DoubleConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -13,8 +16,15 @@
         </Grid.ColumnDefinitions>
 
 
-        <TextBlock Text="{Binding MyPropertyB}" HorizontalAlignment="Left" Margin="99,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="208" Grid.ColumnSpan="2"/>
-        <TextBox Text="{Binding MyPropertyA}" HorizontalAlignment="Left" Height="47" Margin="99,65,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="208" Grid.ColumnSpan="2"/>
+        <TextBlock Text="{local:CultureAwareBinding MyPropertyB}" HorizontalAlignment="Left" Margin="99,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="208" Grid.ColumnSpan="2"/>
+        <TextBox Name="MyTB" HorizontalAlignment="Left" Height="47" Margin="99,65,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="208" Grid.ColumnSpan="2">
+            <TextBox.Text>
+                <local:CultureAwareMultiBinding Converter="{StaticResource DoubleConverter}" UpdateSourceTrigger="PropertyChanged">
+                    <local:CultureAwareBinding Path="MyPropertyA"   />
+                    <local:CultureAwareBinding Path="Text" ElementName="MyTB"/>
+                </local:CultureAwareMultiBinding>
+            </TextBox.Text>
+        </TextBox>
         <!-- Do I need , UpdateSourceTrigger=PropertyChanged above? -->
         <!-- No, my answer is: delete Focusable false below! -->
         <Button Focusable="False" Command="{Binding DoubleCmd}" Content="Button" HorizontalAlignment="Left" Margin="99,187,0,0" VerticalAlignment="Top" Width="208" Height="48" Grid.ColumnSpan="2" />
