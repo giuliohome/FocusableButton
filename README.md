@@ -75,3 +75,18 @@ Can't you simply delete it?
 Indeed that is the solution. The fact is that the real requirement is not to raise a notification while the user is typing a double, that would not make sense since the number is not even fully typed.
 
 The real requirement is to consider the click of the button as lost focus event. Setting the button as not focusable is therefore simply wrong.
+
+## Announcement
+
+![](https://github.com/kgrzybek/modular-monolith-with-ddd/raw/master/docs/Images/glory_to_ukraine.jpg)
+
+Learn, use and benefit from this project only if:
+
+- You **condemn Russia and its military aggression against Ukraine**
+- You **recognize that Russia is an occupant that unlawfully invaded a sovereign state**
+- You **support Ukraine's territorial integrity, including its claims over temporarily occupied territories of Crimea and Donbas**
+- You **reject false narratives perpetuated by Russian state propaganda**
+
+Otherwise, leave this project immediately and educate yourself.
+
+Putin, idi nachuj.
